@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="hero col-md-4" *ngFor='let hero of heros' (click)="openModal(template); heroSelected = hero">
+      <img [src]="hero.thumbnail.path + '/portrait_xlarge.' + hero.thumbnail.extension" />
+    </div>
+  </div>
+</div>
+
+<ng-template #template>
+  <hero-detail [(hero)]="heroSelected"></hero-detail>
+</ng-template>

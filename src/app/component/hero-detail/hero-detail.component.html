@@ -1,0 +1,25 @@
+<div class="modal-header">
+  <h1 class="modal-title pull-left">{{hero.name}}</h1>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-5">
+      <img [src]="hero.thumbnail.path + '/portrait_incredible.' + hero.thumbnail.extension" />
+    </div>
+    <div class="col-md-7">
+      {{hero.description}}
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6" *ngFor='let comic of comics'>
+    <div class="comic row">
+      <div class="col-md-3">
+        <img [src]="comic.thumbnail.path + '/portrait_small.' + comic.thumbnail.extension" />
+      </div>
+      <div class="col-md-9">
+        {{comic.title}}
+      </div>
+    </div>
+  </div>
+</div>
